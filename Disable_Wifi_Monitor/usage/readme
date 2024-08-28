@@ -1,0 +1,43 @@
+# alat kali linux yang di gunakan
+
+- `airmon` - untuk mengaktifkan mode monitor
+- `airodump` - untuk membuang semua jaringan di sekitar
+- `aireplay` -  untuk menerapkan paket deauthentication atau untuk menonaktifkan wifi
+
+# Anda dapa mengikuti langkah-langkah Berikut ini:
+
+# ifconfig
+![](ifconfig.png)
+
+# Masukan argument:
+```
+python3 Wifi_dissconnector.py -i <interface>
+```
+Ganti `<interface>` dengan antarmuka jaringan Anda, seperti `wlan0` atau `wlan0mon`.
+![](entering_argument.png)
+
+# sekarang modul nirkabel kita akan memantau
+![](1.png)
+
+# Mode Monotor Anda dapat melihat bagian ether dienkripsi sekarang
+![](2.png)
+
+# memasuki antarmuka yang dimodifikasi atau memasuki yang sama jika tidak dimodifikasi
+![](3_Entering_new_interface.png)
+
+# menemukan jaringan wifi dan perangkat yang terhubung dengannya
+![](4_discovered_networks.png)
+
+# memasukkan detail channel `ch` target:
+![](5_Entering_target_mac_and_channel.png)
+
+# sekarang adaptor kita ada di mac target
+![](6_on_target_mac.png)
+
+![](7.png)
+# sekarang menjalankan perintah aireplay di shell baru sekarang jaringan target dinonaktifkan hingga berjalan
+
+# tekan ctrl+c untuk berhenti
+![](disconnecting_target_wifi.png)
+
+
